@@ -3,4 +3,6 @@
 
     <string name="apikey">29597552-1af206732a581f33affcbbead</string>
     <string name="server_address">"https://pixabay.com/api/</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

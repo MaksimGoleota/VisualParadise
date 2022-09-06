@@ -7,6 +7,8 @@ import com.merio.visualparadise.R
 import com.merio.visualparadise.data.network.interceptor.RequestInterceptor
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import io.reactivex.schedulers.Schedulers
 import okhttp3.Cache
 import okhttp3.OkHttpClient
@@ -20,6 +22,7 @@ import java.util.concurrent.TimeUnit
 private const val OK_HTTP_CACHE_SIZE = 10L * 1024L * 1024L
 
 @Module
+@InstallIn(SingletonComponent::class)
 internal class NetworkModule() {
 
     @Provides
