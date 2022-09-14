@@ -1,4 +1,4 @@
-package com.merio.visualparadise.features.searchscreen.image
+package com.merio.visualparadise.features.searchscreen.video
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.merio.visualparadise.R
 
-class ImageScreenFragment : Fragment() {
+class SearchScreenVideoFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +17,6 @@ class ImageScreenFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_image_screen, container, false)
+        return inflater.inflate(R.layout.fragment_video_screen_search, container, false)
     }
-
-
 }
