@@ -1,16 +1,13 @@
-package com.merio.visualparadise.features.searchresultsscreen
+package com.merio.visualparadise.features.searchresultsscreen.image
 
-import android.R
-import android.R.attr.data
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.navigation.fragment.findNavController
+import com.merio.visualparadise.R
 import com.merio.visualparadise.databinding.FragmentImagesScreenBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,6 +20,11 @@ class ImagesScreenFragment : Fragment() {
     private var _binding: FragmentImagesScreenBinding? = null
     private val binding get() = _binding!!
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mViewModel.search(arguments?.getString("q")?: "angel")
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,9 +34,15 @@ class ImagesScreenFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding) {
-        mViewModel.search(arguments?.getString("q")?: "angel")
-
-        var adapter = ImageScreenAdapter()
+        val adapter = ImageScreenAdapter { url, views, downloads, likes ->
+            val bundle = Bundle().apply {
+                putString("largeImageURL", url)
+                putInt("views", views)
+                putInt("downloads", downloads)
+                putInt("likes", likes)
+            }
+            findNavController().navigate(R.id.fullImageScreenFragment, args = bundle)
+        }
 
         recyclerviewImages.adapter = adapter
         recyclerviewImages.setHasFixedSize(true)
@@ -42,6 +50,7 @@ class ImagesScreenFragment : Fragment() {
         mViewModel.imageLiveData.observe(viewLifecycleOwner) { image ->
             adapter.setData(image)
         }
+
     }
 
     override fun onDestroyView() {

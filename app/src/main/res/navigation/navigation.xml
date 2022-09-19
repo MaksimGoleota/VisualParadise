@@ -33,7 +33,16 @@
         tools:layout="@layout/fragment_video_screen_search" />
     <fragment
         android:id="@+id/imagesScreenFragment"
-        android:name="com.merio.visualparadise.features.searchresultsscreen.ImagesScreenFragment"
+        android:name="com.merio.visualparadise.features.searchresultsscreen.image.ImagesScreenFragment"
         android:label="fragment_images_screen"
-        tools:layout="@layout/fragment_images_screen" />
+        tools:layout="@layout/fragment_images_screen" >
+        <action
+            android:id="@+id/action_imagesScreenFragment_to_fullImageScreenFragment2"
+            app:destination="@id/fullImageScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullImageScreenFragment"
+        android:name="com.merio.visualparadise.features.fullimagescreen.FullImageScreenFragment"
+        android:label="fragment_full_image_screen"
+        tools:layout="@layout/fragment_full_image_screen" />
 </navigation>

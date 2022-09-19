@@ -1,4 +1,4 @@
-package com.merio.visualparadise.features.searchresultsscreen
+package com.merio.visualparadise.features.searchresultsscreen.image
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,9 @@ import com.merio.visualparadise.data.network.models.Image
 import com.merio.visualparadise.databinding.ImageLayoutBinding
 import com.squareup.picasso.Picasso
 
-class ImageScreenAdapter: RecyclerView.Adapter<ImageScreenAdapter.ImageViewHolder>() {
+class ImageScreenAdapter(
+    private val itemClicks: (String, Int, Int, Int) -> Unit
+) : RecyclerView.Adapter<ImageScreenAdapter.ImageViewHolder>() {
 
     class ImageViewHolder(val binding: ImageLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -36,9 +38,14 @@ class ImageScreenAdapter: RecyclerView.Adapter<ImageScreenAdapter.ImageViewHolde
                 .onlyScaleDown()
                 .into(binding.image)
 
-//            holder.itemView.setOnClickListener {
-//                itemClicks(currentItem.team.team_id)
-//            }
+            holder.itemView.setOnClickListener {
+                itemClicks(
+                    currentItem.largeImageURL,
+                    currentItem.views,
+                    currentItem.downloads,
+                    currentItem.likes
+                )
+            }
         }
     }
 
