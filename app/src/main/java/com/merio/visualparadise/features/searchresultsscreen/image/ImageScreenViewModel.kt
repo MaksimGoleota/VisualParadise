@@ -1,4 +1,4 @@
-package com.merio.visualparadise.features.searchresultsscreen
+package com.merio.visualparadise.features.searchresultsscreen.image
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
