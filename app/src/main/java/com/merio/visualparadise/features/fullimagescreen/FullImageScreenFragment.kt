@@ -25,7 +25,7 @@ class FullImageScreenFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding) {
-
+        progressBarFullImageScreen.visibility = View.VISIBLE
         Picasso.get()
             .load(arguments?.getString("largeImageURL"))
             .centerCrop()

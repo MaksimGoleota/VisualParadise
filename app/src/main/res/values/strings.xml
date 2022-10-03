@@ -8,5 +8,7 @@
     <string name="views">Views</string>
     <string name="downloads">Downloads</string>
     <string name="likes">Likes</string>
-    <string name="comments">Comments</string>
+    <string name="search_images">Search Images</string>
+    <string name="search">Search</string>
+    <string name="search_video">Search Video</string>
 </resources>

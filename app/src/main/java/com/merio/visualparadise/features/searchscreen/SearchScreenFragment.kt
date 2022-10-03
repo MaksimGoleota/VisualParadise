@@ -40,12 +40,12 @@ class SearchScreenFragment : Fragment() {
                 1 -> tab.setIcon(R.drawable.ic_video)
             }
             tabLayout.getTabAt(0)?.icon
-                ?.setColorFilter(resources.getColor(R.color.red), PorterDuff.Mode.SRC_IN)
+                ?.setColorFilter(resources.getColor(R.color.black), PorterDuff.Mode.SRC_IN)
         }.attach()
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                tab?.icon?.setColorFilter(resources.getColor(R.color.red), PorterDuff.Mode.SRC_IN)
+                tab?.icon?.setColorFilter(resources.getColor(R.color.black), PorterDuff.Mode.SRC_IN)
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
