@@ -10,26 +10,29 @@
         android:id="@+id/searchBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin_small"
         android:background="@drawable/rounded_searchview"
-        android:text="Search"
+        android:text="@string/search"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/imageSearchScreen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin_small"
         android:background="@drawable/rounded_searchview"
+        android:hint="@string/search_images"
         android:iconifiedByDefault="false"
+        android:padding="@dimen/layout_margin_extra_small"
         android:queryHint="Search"
-        android:textColor="#FFFFFF"
+        android:textSize="@dimen/layout_text_size"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/searchBtn"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

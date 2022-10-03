@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/_fhdwinter388"
     tools:context=".features.searchscreen.SearchScreenFragment">
 
 
@@ -19,7 +19,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.tabs.TabLayout
@@ -31,10 +30,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:tabGravity="fill"
         app:tabIconTint="@color/white"
-        app:tabIndicatorColor="@color/red"
+        app:tabIndicatorColor="@color/black"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/red"
+        app:tabSelectedTextColor="@color/black"
         app:tabTextColor="@color/white"
+        android:background="@drawable/rounded_tabs"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

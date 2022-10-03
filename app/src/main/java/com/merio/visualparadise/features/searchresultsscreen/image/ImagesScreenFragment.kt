@@ -34,6 +34,7 @@ class ImagesScreenFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding) {
+        progressBarImagesScreen.visibility = View.VISIBLE
         val adapter = ImageScreenAdapter { url, views, downloads, likes ->
             val bundle = Bundle().apply {
                 putString("largeImageURL", url)
@@ -49,6 +50,7 @@ class ImagesScreenFragment : Fragment() {
 
         mViewModel.imageLiveData.observe(viewLifecycleOwner) { image ->
             adapter.setData(image)
+            progressBarImagesScreen.visibility = View.INVISIBLE
         }
 
     }

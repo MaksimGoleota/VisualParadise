@@ -4,4 +4,6 @@
     <dimen name="layout_margin_small">10dp</dimen>
     <dimen name="layout_margin_medium">15dp</dimen>
     <dimen name="layout_margin_extra_large">50dp</dimen>
+
+    <dimen name="layout_text_size">22sp</dimen>
 </resources>
