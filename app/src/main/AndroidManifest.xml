@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.merio.visualparadise">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:name=".VisualParadiseApplication"
         android:allowBackup="true"
@@ -16,15 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisualParadise"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".features.splashscreen.SplashScreenActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
