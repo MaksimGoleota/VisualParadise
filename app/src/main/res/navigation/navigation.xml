@@ -45,4 +45,10 @@
         android:name="com.merio.visualparadise.features.fullimagescreen.FullImageScreenFragment"
         android:label="fragment_full_image_screen"
         tools:layout="@layout/fragment_full_image_screen" />
+    <activity
+        android:id="@+id/splashScreenActivity"
+        android:name="com.merio.visualparadise.features.splashscreen.SplashScreenActivity"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
+
 </navigation>
