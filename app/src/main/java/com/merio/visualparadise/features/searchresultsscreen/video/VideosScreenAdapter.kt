@@ -40,7 +40,7 @@ class VideosScreenAdapter(
 
             holder.itemView.setOnClickListener {
                 itemClicks(
-                    currentItem.videos.tiny.toString(),
+                    currentItem.videos.medium.url,
                     currentItem.views,
                     currentItem.downloads,
                     currentItem.likes
