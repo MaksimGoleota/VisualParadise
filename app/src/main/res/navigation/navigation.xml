@@ -30,7 +30,11 @@
         android:id="@+id/searchScreenVideoFragment"
         android:name="com.merio.visualparadise.features.searchscreen.video.SearchScreenVideoFragment"
         android:label="fragment_video_screen_search"
-        tools:layout="@layout/fragment_video_screen_search" />
+        tools:layout="@layout/fragment_video_screen_search" >
+        <action
+            android:id="@+id/action_searchScreenVideoFragment_to_videosScreenFragment"
+            app:destination="@id/videosScreenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/imagesScreenFragment"
         android:name="com.merio.visualparadise.features.searchresultsscreen.image.ImagesScreenFragment"
@@ -50,5 +54,19 @@
         android:name="com.merio.visualparadise.features.splashscreen.SplashScreenActivity"
         android:label="activity_splash_screen"
         tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/fullVideoScreenFragment"
+        android:name="com.merio.visualparadise.features.fullvideoscreenfragment.FullVideoScreenFragment"
+        android:label="fragment_full_video_screen"
+        tools:layout="@layout/fragment_full_video_screen" />
+    <fragment
+        android:id="@+id/videosScreenFragment"
+        android:name="com.merio.visualparadise.features.searchresultsscreen.video.VideosScreenFragment"
+        android:label="VideosScreenFragment"
+        tools:layout="@layout/fragment_videos_screen">
+        <action
+            android:id="@+id/action_videosScreenFragment_to_fullVideoScreenFragment"
+            app:destination="@id/fullVideoScreenFragment" />
+    </fragment>
 
 </navigation>

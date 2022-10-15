@@ -7,9 +7,9 @@ import com.merio.visualparadise.data.network.models.Image
 import com.merio.visualparadise.databinding.ImageLayoutBinding
 import com.squareup.picasso.Picasso
 
-class ImageScreenAdapter(
+class ImagesScreenAdapter(
     private val itemClicks: (String, Int, Int, Int) -> Unit
-) : RecyclerView.Adapter<ImageScreenAdapter.ImageViewHolder>() {
+) : RecyclerView.Adapter<ImagesScreenAdapter.ImageViewHolder>() {
 
     class ImageViewHolder(val binding: ImageLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 

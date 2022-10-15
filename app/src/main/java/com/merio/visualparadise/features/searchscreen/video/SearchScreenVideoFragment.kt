@@ -7,33 +7,35 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.merio.visualparadise.R
+import com.merio.visualparadise.databinding.FragmentVideoScreenSearchBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SearchScreenVideoFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private var _binding: FragmentVideoScreenSearchBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_video_screen_search, container, false)
-    }
+    ): View {
+        _binding = FragmentVideoScreenSearchBinding.inflate(inflater, container, false)
+        return binding.root
+     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?): Unit = with(binding) {
-//
-//        searchBtn.setOnClickListener {
-//            val bundle = Bundle().apply {
-//                putString("q", imageSearchScreen.text.toString())
-//            }
-//            if(imageSearchScreen.text.toString().isEmpty()) {
-//                android.widget.Toast.makeText(activity,"The input field is empty. Try again!",
-//                    android.widget.Toast.LENGTH_SHORT)
-//                    .show()
-//            }
-//            else findNavController().navigate(com.merio.visualparadise.R.id.imagesScreenFragment, args = bundle)
-//        }
-//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?): Unit = with(binding) {
+
+        searchBtn.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString("q", videoSearchScreen.text.toString())
+            }
+            if(videoSearchScreen.text.toString().isEmpty()) {
+               Toast.makeText(activity,"The input field is empty. Try again!",
+                   Toast.LENGTH_SHORT)
+                    .show()
+            }
+            else findNavController().navigate(com.merio.visualparadise.R.id.videosScreenFragment, args = bundle)
+        }
+    }
 }
