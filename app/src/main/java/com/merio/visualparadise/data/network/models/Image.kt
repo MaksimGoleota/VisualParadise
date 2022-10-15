@@ -29,5 +29,5 @@ data class Image(
     val comments: Int,
     val user_id: Int,
     val user: String,
-    val userImageURL: String,
+    val userImageURL: String
 )

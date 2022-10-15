@@ -1,4 +1,4 @@
-package com.merio.visualparadise.features.searchresultsscreen.image
+package com.merio.visualparadise.features.searchresultsscreen.video
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,16 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.merio.visualparadise.R
-import com.merio.visualparadise.databinding.FragmentImagesScreenBinding
+import com.merio.visualparadise.databinding.FragmentVideosScreenBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
-class ImagesScreenFragment : Fragment() {
+class VideosScreenFragment : Fragment() {
 
-    private val mViewModel: ImagesScreenViewModel by viewModels()
+    private val mViewModel: VideosScreenViewModel by viewModels()
 
-    private var _binding: FragmentImagesScreenBinding? = null
+    private var _binding: FragmentVideosScreenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,28 +28,28 @@ class ImagesScreenFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentImagesScreenBinding.inflate(inflater, container, false)
+        _binding = FragmentVideosScreenBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding) {
-        progressBarImagesScreen.visibility = View.VISIBLE
-        val adapter = ImagesScreenAdapter { url, views, downloads, likes ->
+        progressBarVideosScreen.visibility = View.VISIBLE
+        val adapter = VideosScreenAdapter { url, views, downloads, likes ->
             val bundle = Bundle().apply {
-                putString("largeImageURL", url)
+                putString("url", url)
                 putInt("views", views)
                 putInt("downloads", downloads)
                 putInt("likes", likes)
             }
-            findNavController().navigate(R.id.fullImageScreenFragment, args = bundle)
+            findNavController().navigate(R.id.fullVideoScreenFragment, args = bundle)
         }
 
-        recyclerviewImages.adapter = adapter
-        recyclerviewImages.setHasFixedSize(true)
+        recyclerviewVideos.adapter = adapter
+        recyclerviewVideos.setHasFixedSize(true)
 
-        mViewModel.imageLiveData.observe(viewLifecycleOwner) { image ->
-            adapter.setData(image)
-            progressBarImagesScreen.visibility = View.INVISIBLE
+        mViewModel.videoLiveData.observe(viewLifecycleOwner) { video ->
+            adapter.setData(video)
+            progressBarVideosScreen.visibility = View.INVISIBLE
         }
 
     }
