@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.159" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/ic_download1_24.xml" value="0.1885" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/ic_image.xml" value="0.159" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/ic_launcher_background.xml" value="0.159" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/ic_likes_24.xml" value="0.1835" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/ic_video.xml" value="0.159" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/ic_video_24.xml" value="0.159" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/ic_views_24.xml" value="0.1735" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/rounded_searchview.xml" value="0.159" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/drawable/rounded_tabs.xml" value="0.184" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/activity_splash_screen.xml" value="0.22530996152201796" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_full_image_screen.xml" value="0.2" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_full_video_screen.xml" value="0.22530996152201796" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_image_screen.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_image_screen_search.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_images_screen.xml" value="0.264" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_search_screen.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_video_screen.xml" value="0.264" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_video_screen_search.xml" value="0.264" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/fragment_videos_screen.xml" value="0.22530996152201796" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/image_layout.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/list_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/layout/video_layout.xml" value="0.22530996152201796" />
+        <entry key="..\:/Programming/Programs/VisualParadise/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.159" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

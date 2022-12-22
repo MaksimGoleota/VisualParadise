@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/searchScreenFragment">
+
+    <fragment
+        android:id="@+id/searchScreenFragment"
+        android:name="com.merio.visualparadise.features.searchscreen.SearchScreenFragment"
+        android:label="fragment_search_screen"
+        tools:layout="@layout/fragment_search_screen" >
+        <action
+            android:id="@+id/action_searchScreenFragment_to_searchScreenImageFragment"
+            app:destination="@id/searchScreenImageFragment" />
+        <action
+            android:id="@+id/action_searchScreenFragment_to_searchScreenVideoFragment"
+            app:destination="@id/searchScreenVideoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreenImageFragment"
+        android:name="com.merio.visualparadise.features.searchscreen.image.SearchScreenImageFragment"
+        android:label="fragment_image_screen_search"
+        tools:layout="@layout/fragment_image_screen_search" >
+        <action
+            android:id="@+id/action_searchScreenImageFragment_to_imagesScreenFragment"
+            app:destination="@id/imagesScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreenVideoFragment"
+        android:name="com.merio.visualparadise.features.searchscreen.video.SearchScreenVideoFragment"
+        android:label="fragment_video_screen_search"
+        tools:layout="@layout/fragment_video_screen_search" >
+        <action
+            android:id="@+id/action_searchScreenVideoFragment_to_videosScreenFragment"
+            app:destination="@id/videosScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagesScreenFragment"
+        android:name="com.merio.visualparadise.features.searchresultsscreen.image.ImagesScreenFragment"
+        android:label="fragment_images_screen"
+        tools:layout="@layout/fragment_images_screen" >
+        <action
+            android:id="@+id/action_imagesScreenFragment_to_fullImageScreenFragment2"
+            app:destination="@id/fullImageScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullImageScreenFragment"
+        android:name="com.merio.visualparadise.features.fullimagescreen.FullImageScreenFragment"
+        android:label="fragment_full_image_screen"
+        tools:layout="@layout/fragment_full_image_screen" />
+    <activity
+        android:id="@+id/splashScreenActivity"
+        android:name="com.merio.visualparadise.features.splashscreen.SplashScreenActivity"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/fullVideoScreenFragment"
+        android:name="com.merio.visualparadise.features.fullvideoscreenfragment.FullVideoScreenFragment"
+        android:label="fragment_full_video_screen"
+        tools:layout="@layout/fragment_full_video_screen" />
+    <fragment
+        android:id="@+id/videosScreenFragment"
+        android:name="com.merio.visualparadise.features.searchresultsscreen.video.VideosScreenFragment"
+        android:label="VideosScreenFragment"
+        tools:layout="@layout/fragment_videos_screen">
+        <action
+            android:id="@+id/action_videosScreenFragment_to_fullVideoScreenFragment"
+            app:destination="@id/fullVideoScreenFragment" />
+    </fragment>
+
+</navigation>

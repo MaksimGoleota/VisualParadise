@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Visual Paradise</string>
+
+    <string name="apikey">29597552-1af206732a581f33affcbbead</string>
+    <string name="server_address">https://pixabay.com/</string>
+<!--    <string name="previewURL">https://i.vimeocdn.com/video/%1$s_295x166.jpg</string>-->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="views">Views</string>
+    <string name="downloads">Downloads</string>
+    <string name="likes">Likes</string>
+    <string name="search_images">Search Images</string>
+    <string name="search">Search</string>
+    <string name="search_video">Search Video</string>
 </resources>
